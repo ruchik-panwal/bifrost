@@ -1,5 +1,11 @@
 export default function Home() {
   return (
-    <div ></div>
+    <div>
+      <div className="flex flex-col">
+        
+      </div>
+      <div className="flex flex-col"></div>
+      <div className="flex flex-col"></div>
+    </div>
   );
 }
