@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useRef } from "react";
 
 function SearchBar({ termSetter }) {
@@ -19,7 +20,7 @@ function SearchBar({ termSetter }) {
     <input
       ref={inputRef} // 3. Attach the ref to the input
       type="text"
-      className="w-full h-[8vh] border bg-mainWhite text-black rounded-[7px] outline-none p-1 pl-3 pr-3"
+      className="w-full h-[8vh] border bg-foreground text-black rounded-[7px] outline-none p-1 pl-3 pr-3"
       onChange={(event) => inputChange(event.target.value)}
       placeholder=""
     />

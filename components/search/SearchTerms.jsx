@@ -1,3 +1,4 @@
+'use client'
 import { useRef, useEffect } from "react";
 
 function SearchTerms({ getTerm, setSelectState, selectState, terms }) {
@@ -30,7 +31,7 @@ function SearchTerms({ getTerm, setSelectState, selectState, terms }) {
   }, [selectState, displayTerms]); // Re-run when selection OR the list changes
   return (
     <div
-      className="flex flex-col w-full h-full border overflow-y-scroll select-none gap-2 bg-containerBg rounded-[7px] p-2"
+      className="flex flex-col w-full h-full border overflow-y-scroll select-none gap-2 bg-background rounded-[7px] p-2"
       ref={containerRef}
     >
       {displayTerms.map((term, ind) => (
@@ -68,14 +69,14 @@ function TermButton({ term, ind, onSelect, isSelected }) {
     <button
       onMouseEnter={onSelect}
       onClick={handleClick}
-      className={`flex text-[1rem]  justify-between items-center p-1.75 rounded-[5px] ${isSelected ? "bg-mainWhite  text-black" : "bg-transparent text-mainWhite"} `}
+      className={`flex text-[1rem]  justify-between items-center p-1.75 rounded-[5px] ${isSelected ? "bg-foreground  text-black" : "bg-transparent text-foreground"} `}
     >
       <div className="flex gap-2 items-center h-10 ">
         <div className="h-7 w-7 rounded-full overflow-hidden">
           <img
             src={term.logo}
             alt={term.name + "logo"}
-            className="h-full w-full object-cover scale-105 bg-mainWhite"
+            className="h-full w-full object-cover scale-105 bg-foreground"
           />{" "}
         </div>
         <div>{term.name}</div>

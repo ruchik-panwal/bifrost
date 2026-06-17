@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect, useMemo } from "react";
 import SearchBar from "./SearchBar";
 import SearchTerms from "./SearchTerms";
